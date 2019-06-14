@@ -1,0 +1,374 @@
+body {
+  font-family: Arial, sans-serif;
+}
+body > div {
+  margin: 10px;
+}
+
+.animated-icon1 {
+  background: tomato;
+  cursor: pointer;
+  display: grid;
+  height: 40vw;
+  place-content: center;
+  width: 40vw;
+}
+.animated-icon1 > * {
+  transition: 0s;
+}
+.animated-icon1 .icon {
+  background: #000;
+  height: 5vw;
+  position: relative;
+  transition-delay: 0.4s;
+  width: 30vw;
+}
+.animated-icon1 .icon::after, .animated-icon1 .icon::before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 5vw;
+  position: absolute;
+  transition: top 0.4s 0.4s, transform 0.4s 0s;
+  width: 30vw;
+}
+.animated-icon1 .icon::after {
+  top: 10vw;
+}
+.animated-icon1 .icon::before {
+  top: -10vw;
+}
+.animated-icon1.active {
+  display: grid;
+  place-content: center;
+}
+.animated-icon1.active .icon {
+  background: transparent;
+  position: relative;
+}
+.animated-icon1.active .icon::after, .animated-icon1.active .icon::before {
+  transition: top 0.4s 0s, transform 0.4s 0.4s;
+}
+.animated-icon1.active .icon::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+.animated-icon1.active .icon::before {
+  top: 0vw;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 480px) {
+  .animated-icon1 {
+    height: 120px;
+    width: 120px;
+  }
+  .animated-icon1 .icon {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon1 .icon::after, .animated-icon1 .icon::before {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon1 .icon::after {
+    top: 25px;
+  }
+  .animated-icon1 .icon::before {
+    top: -25px;
+  }
+}
+.animated-icon2 {
+  background: dodgerblue;
+  cursor: pointer;
+  display: grid;
+  height: 40vw;
+  place-content: center;
+  width: 40vw;
+}
+.animated-icon2 > * {
+  transition: .4s;
+}
+.animated-icon2 .icon {
+  background: #000;
+  height: 5vw;
+  position: relative;
+  width: 30vw;
+}
+.animated-icon2 .icon::after, .animated-icon2 .icon::before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 5vw;
+  position: absolute;
+  transition: top 0.4s 0.4s, transform 0.4s 0s;
+  width: 30vw;
+}
+.animated-icon2 .icon::after {
+  top: 10vw;
+}
+.animated-icon2 .icon::before {
+  top: -10vw;
+}
+.animated-icon2.active {
+  display: grid;
+  place-content: center;
+}
+.animated-icon2.active .icon {
+  background: transparent;
+  position: relative;
+  transform: rotate(180deg);
+}
+.animated-icon2.active .icon::after, .animated-icon2.active .icon::before {
+  transition: top 0.4s 0s, transform 0.4s 0.4s;
+}
+.animated-icon2.active .icon::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+.animated-icon2.active .icon::before {
+  top: 0vw;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 480px) {
+  .animated-icon2 {
+    height: 120px;
+    width: 120px;
+  }
+  .animated-icon2 .icon {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon2 .icon::after, .animated-icon2 .icon::before {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon2 .icon::after {
+    top: 25px;
+  }
+  .animated-icon2 .icon::before {
+    top: -25px;
+  }
+}
+.animated-icon3 {
+  background: #af1c26;
+  cursor: pointer;
+  display: grid;
+  height: 40vw;
+  place-content: center;
+  transition: .4s;
+  width: 40vw;
+}
+.animated-icon3 * {
+  transition: .4s;
+}
+.animated-icon3 .icon {
+  background: #fff;
+  height: 5vw;
+  position: relative;
+  width: 30vw;
+}
+.animated-icon3 .icon::after, .animated-icon3 .icon::before {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 5vw;
+  position: absolute;
+  transition: .4s;
+  width: 30vw;
+}
+.animated-icon3 .icon::after {
+  top: 10vw;
+}
+.animated-icon3 .icon::before {
+  top: -10vw;
+}
+.animated-icon3.active {
+  background: #d1d1d1;
+  display: grid;
+  place-content: center;
+}
+.animated-icon3.active .icon {
+  background: transparent;
+  position: relative;
+  transform: rotate(180deg);
+}
+.animated-icon3.active .icon::after, .animated-icon3.active .icon::before {
+  background: #af1c26;
+}
+.animated-icon3.active .icon::after {
+  top: 0;
+  transform: rotate(135deg);
+}
+.animated-icon3.active .icon::before {
+  top: 0vw;
+  transform: rotate(45deg);
+}
+
+@media (min-width: 480px) {
+  .animated-icon3 {
+    height: 120px;
+    width: 120px;
+  }
+  .animated-icon3 .icon {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon3 .icon::after, .animated-icon3 .icon::before {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon3 .icon::after {
+    top: 25px;
+  }
+  .animated-icon3 .icon::before {
+    top: -25px;
+  }
+}
+.animated-icon4 {
+  background: #E87672;
+  cursor: pointer;
+  display: grid;
+  height: 40vw;
+  place-content: center;
+  transition: .4s;
+  width: 40vw;
+}
+.animated-icon4 > * {
+  transition: .4s;
+}
+.animated-icon4 .icon {
+  background: #000;
+  height: 5vw;
+  position: relative;
+  width: 30vw;
+}
+.animated-icon4 .icon::after, .animated-icon4 .icon::before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 5vw;
+  position: absolute;
+  transition: 0.4s;
+  width: 30vw;
+}
+.animated-icon4 .icon::after {
+  top: 10vw;
+}
+.animated-icon4 .icon::before {
+  top: -10vw;
+}
+.animated-icon4.active {
+  background: #00d1bf;
+  display: grid;
+  place-content: center;
+}
+.animated-icon4.active .icon {
+  background: transparent;
+  position: relative;
+}
+.animated-icon4.active .icon::after, .animated-icon4.active .icon::before {
+  transition: 0.4s;
+}
+.animated-icon4.active .icon::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+.animated-icon4.active .icon::before {
+  top: 0vw;
+  transform: rotate(135deg);
+}
+
+@media (min-width: 480px) {
+  .animated-icon4 {
+    height: 120px;
+    width: 120px;
+  }
+  .animated-icon4 .icon {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon4 .icon::after, .animated-icon4 .icon::before {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon4 .icon::after {
+    top: 25px;
+  }
+  .animated-icon4 .icon::before {
+    top: -25px;
+  }
+}
+.animated-icon5 {
+  background: #EAAC51;
+  cursor: pointer;
+  display: grid;
+  height: 40vw;
+  place-content: center;
+  width: 40vw;
+}
+.animated-icon5 > * {
+  transition: .4s;
+}
+.animated-icon5 .icon {
+  background: #000;
+  height: 5vw;
+  position: relative;
+  width: 30vw;
+}
+.animated-icon5 .icon::after, .animated-icon5 .icon::before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 5vw;
+  position: absolute;
+  transition: 0.4s;
+  width: 30vw;
+}
+.animated-icon5 .icon::after {
+  top: 10vw;
+}
+.animated-icon5 .icon::before {
+  top: -10vw;
+}
+.animated-icon5.active {
+  display: grid;
+  place-content: center;
+}
+.animated-icon5.active .icon {
+  background: transparent;
+  position: relative;
+}
+.animated-icon5.active .icon::after, .animated-icon5.active .icon::before {
+  transition: 0.4s;
+}
+.animated-icon5.active .icon::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+.animated-icon5.active .icon::before {
+  top: 0vw;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 480px) {
+  .animated-icon5 {
+    height: 120px;
+    width: 120px;
+  }
+  .animated-icon5 .icon {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon5 .icon::after, .animated-icon5 .icon::before {
+    height: 13px;
+    width: 70px;
+  }
+  .animated-icon5 .icon::after {
+    top: 25px;
+  }
+  .animated-icon5 .icon::before {
+    top: -25px;
+  }
+}
